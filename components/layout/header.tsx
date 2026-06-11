@@ -8,11 +8,10 @@ import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const navItems = [
-  { href: "#works", label: "Selected work", number: "01" },
-  { href: "#about", label: "About", number: "02" },
-  { href: "#testimonials", label: "What clients say", number: "03" },
-  { href: "#awards", label: "Awards & Recognition", number: "04" },
-  { href: "#insights", label: "Insights", number: "05" },
+  { href: "#about", label: "Quiénes somos", number: "01" },
+  { href: "#services", label: "Servicios", number: "02" },
+  { href: "#works", label: "Proyectos", number: "03" },
+  { href: "#contact", label: "Contacto", number: "04" },
 ]
 
 export function Header() {
@@ -62,7 +61,7 @@ export function Header() {
               }}
               className="text-lg font-semibold tracking-tight"
             >
-              portfolio
+              DYELUX
             </Link>
 
             {/* Desktop Navigation */}
@@ -90,7 +89,7 @@ export function Header() {
                   boxShadow: "0 4px 20px rgba(32, 62, 236, 0.3)",
                 }}
               >
-                <span className="relative z-10">Let's Talk</span>
+                <span className="relative z-10">Contacto</span>
                 {/* Glow effect on hover */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl bg-gradient-to-r from-[#203eec] to-[#00d4ff]" />
               </Link>
@@ -110,7 +109,7 @@ export function Header() {
           <div className="flex flex-col h-full p-6">
             <div className="flex items-center justify-between">
               <Link href="/" className="text-lg font-semibold tracking-tight">
-                portfolio
+                DYELUX
               </Link>
               <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 -mr-2" aria-label="Close menu">
                 <X className="w-5 h-5" />
@@ -138,7 +137,7 @@ export function Header() {
                   boxShadow: "0 4px 20px rgba(32, 62, 236, 0.3)",
                 }}
               >
-                <span className="relative z-10">Let's Talk</span>
+                <span className="relative z-10">Contacto</span>
                 {/* Glow effect on hover */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl bg-gradient-to-r from-[#203eec] to-[#00d4ff]" />
               </Link>

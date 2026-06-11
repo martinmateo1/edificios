@@ -8,35 +8,35 @@ import { SectionTitle } from "@/components/ui/section-title"
 const works = [
   {
     id: 1,
-    title: "AI Onboarding Assistant",
-    category: "AI Product",
-    description: "Building an intelligent onboarding flow powered by GPT-4 and natural conversations",
+    title: "Edificio residencial",
+    category: "Desarrollo inmobiliario",
+    description: "Colocación de aberturas de aluminio, barandas y cerramientos en obra nueva.",
     image: "/images/work-onboarding.png",
-    tags: ["AI", "v0", "Next.js", "OpenAI"],
+    tags: ["Aberturas", "Barandas", "Cerramientos"],
   },
   {
     id: 2,
-    title: "AI Fashion Curator",
-    category: "E-commerce AI",
-    description: "Personalized style recommendations using computer vision and preference learning",
+    title: "Torre de departamentos",
+    category: "Obra nueva",
+    description: "Suministro y colocación de curtainwall y soluciones de aluminio a gran escala.",
     image: "/images/work-fashion.png",
-    tags: ["AI", "Machine Learning", "Midjourney"],
+    tags: ["Curtainwall", "Suministro", "Colocación"],
   },
   {
     id: 3,
-    title: "Smart Task Manager",
-    category: "Productivity AI",
-    description: "AI-powered task prioritization and scheduling with natural language processing",
+    title: "Complejo comercial",
+    category: "Construcción",
+    description: "Provisión de materiales y ejecución de cerramientos de aluminio para locales y oficinas.",
     image: "/images/work-tasks.png",
-    tags: ["AI", "Claude", "Vibe Coding"],
+    tags: ["Cerramientos", "Materiales", "Rejillas"],
   },
   {
     id: 4,
-    title: "Crypto AI Analytics",
-    category: "FinTech AI",
-    description: "Real-time market insights and predictions powered by advanced AI models",
+    title: "Desarrollo de viviendas",
+    category: "Desarrollo inmobiliario",
+    description: "Coordinación operativa e instalación de aberturas en múltiples unidades.",
     image: "/images/work-crypto.png",
-    tags: ["AI", "Data Viz", "GPT-4"],
+    tags: ["Aberturas", "Instalación", "Obra nueva"],
   },
 ]
 
@@ -46,17 +46,15 @@ export function SelectedWorks() {
       <div className="max-w-[1280px] mx-auto px-6 md:px-12">
         {/* Section Header */}
         <div className="flex items-center justify-between mb-12 md:mb-16">
-          <SectionTitle className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
-            Selected work
-          </SectionTitle>
-          <Link
-            href="#"
-            className="hidden md:inline-flex items-center gap-2 text-sm transition-colors"
-            style={{ color: "#203eec" }}
-          >
-            View all works
-            <ArrowUpRight className="w-4 h-4" style={{ color: "#203eec" }} />
-          </Link>
+          <div className="max-w-2xl">
+            <SectionTitle className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
+              Proyectos en los que trabajamos
+            </SectionTitle>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              Hemos participado en distintos desarrollos inmobiliarios y obras nuevas, aportando soluciones técnicas y
+              operativas adaptadas a cada proyecto.
+            </p>
+          </div>
         </div>
 
         <div className="relative">
@@ -110,18 +108,6 @@ export function SelectedWorks() {
               </Link>
             </div>
           ))}
-        </div>
-
-        {/* Mobile View All */}
-        <div className="md:hidden mt-8 text-center">
-          <Link
-            href="#"
-            className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium border rounded-full hover:bg-secondary transition-colors"
-            style={{ color: "#203eec", borderColor: "#203eec" }}
-          >
-            View all works
-            <ArrowUpRight className="w-4 h-4" />
-          </Link>
         </div>
       </div>
     </section>

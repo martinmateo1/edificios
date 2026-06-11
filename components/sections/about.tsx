@@ -1,21 +1,10 @@
 "use client"
 
-const skills = [
-  "AI Product Design",
-  "Vibe Coding",
-  "v0 by Vercel",
-  "Prompt Engineering",
-  "Midjourney/DALL-E",
-  "ChatGPT/Claude",
-  "Figma AI",
-  "Design Systems",
-  "Generative UI",
-]
-
-const stats = [
-  { value: "8+", label: "Years Experience" },
-  { value: "50+", label: "AI Projects" },
-  { value: "30+", label: "Happy Clients" },
+const values = [
+  { title: "Calidad", description: "Compromiso con altos estándares de ejecución y terminación." },
+  { title: "Experiencia", description: "Trayectoria en proyectos de distinta escala y complejidad." },
+  { title: "Confianza", description: "Relaciones construidas a largo plazo con clientes y desarrolladores." },
+  { title: "Cumplimiento", description: "Planificación y responsabilidad en tiempos de obra." },
 ]
 
 import { SectionTitle } from "@/components/ui/section-title"
@@ -27,47 +16,30 @@ export function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Left Content */}
           <div>
+            <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">Quiénes somos</p>
             <SectionTitle className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-balance">
-              Bridging AI Technology & Human-Centered Design
+              Experiencia, trayectoria y compromiso en cada obra
             </SectionTitle>
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              I'm an AI Digital Product Designer specializing in vibe coding and generative design. I leverage
-              cutting-edge AI tools like v0, Midjourney, and Claude to rapidly prototype and build production-ready
-              experiences.
+              DYELUX es una empresa especializada en soluciones de aluminio para desarrollos inmobiliarios y obras
+              nuevas. A lo largo de los años hemos participado en múltiples proyectos junto a desarrolladores,
+              constructoras e inversores, consolidando una trayectoria basada en calidad de materiales y ejecución,
+              cumplimiento, confianza y profesionalismo.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              My approach combines prompt engineering mastery, AI-powered design workflows, and deep understanding of
-              LLMs to create products that feel intuitive and magical. I believe AI should amplify creativity, not
-              replace it.
+              Nuestro trabajo combina experiencia técnica, capacidad operativa y conocimiento real de las necesidades
+              del sector de la construcción.
             </p>
           </div>
 
-          {/* Right Content */}
-          <div>
-            {/* Skills */}
-            <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">Expertise</h3>
-              <div className="flex flex-wrap gap-2">
-                {skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-4 py-2 text-sm font-medium border border-border rounded-full hover:bg-secondary transition-colors cursor-default"
-                  >
-                    {skill}
-                  </span>
-                ))}
+          {/* Right Content - Values */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {values.map((value) => (
+              <div key={value.title} className="p-6 bg-secondary rounded-2xl">
+                <h3 className="text-lg font-semibold">{value.title}</h3>
+                <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{value.description}</p>
               </div>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 mt-12">
-              {stats.map((stat) => (
-                <div key={stat.label} className="text-center p-4 bg-secondary rounded-2xl">
-                  <div className="text-2xl md:text-3xl font-semibold">{stat.value}</div>
-                  <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
-                </div>
-              ))}
-            </div>
+            ))}
           </div>
         </div>
       </div>

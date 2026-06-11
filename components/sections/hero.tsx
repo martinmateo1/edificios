@@ -6,7 +6,7 @@ import { ArrowDown } from "lucide-react"
 import { useEffect, useState } from "react"
 
 export function Hero() {
-  const titleText = "Designing intelligence with a human touch"
+  const titleText = "Soluciones integrales en aluminio para desarrollos"
   const words = titleText.split(" ")
   const [maskReveal, setMaskReveal] = useState(0)
   const [opacity, setOpacity] = useState(0)
@@ -45,25 +45,24 @@ export function Hero() {
 
       <div className="max-w-[1280px] mx-auto px-6 md:px-12 py-20 md:py-32 md:pb-4 pb-4 pt-4 md:pt-32">
         <div className="max-w-4xl">
-          <p className="text-muted-foreground mb-6 text-lg font-normal">I'm Abby, AI Digital Product Designer</p>
+          <p className="text-muted-foreground mb-6 text-lg font-normal">DYELUX — Aluminio para la construcción</p>
 
           {/* Main Title with animated words */}
           <h1 className="text-5xl sm:text-6xl lg:text-[96px] font-semibold tracking-tight leading-[1] text-balance md:text-9xl">
             {words.map((word, index) => (
               <span
                 key={index}
-                className={`hero-word my-0 py-2 font-mono font-normal text-5xl md:text-7xl ${word === "AI" ? "ai-gradient-word" : ""}`}
+                className={`hero-word my-0 py-2 font-mono font-normal text-5xl md:text-7xl ${word === "aluminio" ? "ai-gradient-word" : ""}`}
                 style={{
                   animationDelay: `${index * 0.1}s`,
                   marginRight: index < words.length - 1 ? "0.25em" : "0",
-                  ...(word === "AI"
+                  ...(word === "aluminio"
                     ? {
-                        background: "linear-gradient(135deg, #ff006e 0%, #8b5cf6 33%, #203eec 66%, #00d4ff 100%)",
+                        background: "linear-gradient(135deg, #203eec 0%, #00d4ff 100%)",
                         WebkitBackgroundClip: "text",
                         WebkitTextFillColor: "transparent",
                         backgroundClip: "text",
-                        filter:
-                          "drop-shadow(0 0 20px rgba(255, 0, 110, 0.3)) drop-shadow(0 0 30px rgba(139, 92, 246, 0.3)) drop-shadow(0 0 40px rgba(0, 212, 255, 0.2))",
+                        filter: "drop-shadow(0 0 20px rgba(32, 62, 236, 0.3)) drop-shadow(0 0 40px rgba(0, 212, 255, 0.2))",
                       }
                     : {}),
                 }}
@@ -74,13 +73,14 @@ export function Hero() {
           </h1>
 
           <p className="mt-8 max-w-xl leading-relaxed text-left text-lg text-zinc-500 ml-0">
-            I craft intelligent, intuitive AI-powered products using vibe coding, generative design tools, and
-            cutting-edge AI technologies. Let's build the future of human-AI interaction together.
+            Dedicados a la colocación y suministro de aberturas de aluminio para edificios, obras nuevas y proyectos de
+            construcción. Trabajamos junto a desarrolladores, constructoras e inversores brindando soluciones técnicas
+            de calidad.
           </p>
 
           <div className="flex flex-row items-start gap-4 mt-10">
             <Link
-              href="#contact"
+              href="#works"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white rounded-full transition-all relative overflow-hidden group"
               style={{
                 background: "linear-gradient(135deg, #203eec 0%, #00d4ff 100%)",
@@ -93,14 +93,14 @@ export function Hero() {
                 e.currentTarget.style.boxShadow = "0 4px 20px rgba(32, 62, 236, 0.3)"
               }}
             >
-              Let's Talk
+              Ver proyectos
             </Link>
             <Link
-              href="#works"
+              href="#contact"
               className="inline-flex items-center gap-2 px-8 py-4 text-base font-medium transition-colors"
               style={{ color: "#203eec" }}
             >
-              View Works
+              Contacto
               <ArrowDown className="w-4 h-4" />
             </Link>
           </div>

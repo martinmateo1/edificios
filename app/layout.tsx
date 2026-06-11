@@ -11,13 +11,15 @@ const interTight = Inter_Tight({
 })
 
 export const metadata: Metadata = {
-  title: "Portfolio | Digital Product Designer",
-  description: "Independent digital product designer crafting thoughtful, pixel-perfect experiences for the web.",
-  keywords: ["design", "portfolio", "UI/UX", "product design", "digital design"],
-  authors: [{ name: "Portfolio" }],
+  title: "DYELUX | Soluciones integrales en aluminio",
+  description:
+    "Colocación y suministro de aberturas de aluminio, barandas y cerramientos para edificios, obras nuevas y proyectos de construcción.",
+  keywords: ["aluminio", "aberturas", "curtainwall", "cerramientos", "barandas", "construcción", "obra nueva"],
+  authors: [{ name: "DYELUX" }],
   openGraph: {
-    title: "Portfolio | Digital Product Designer",
-    description: "Independent digital product designer crafting thoughtful, pixel-perfect experiences for the web.",
+    title: "DYELUX | Soluciones integrales en aluminio",
+    description:
+      "Colocación y suministro de aberturas de aluminio, barandas y cerramientos para edificios, obras nuevas y proyectos de construcción.",
     type: "website",
   },
     generator: 'v0.app'
@@ -35,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className={`${interTight.className} font-sans antialiased`}>
         <MagneticCursor />
         {children}

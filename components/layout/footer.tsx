@@ -11,11 +11,11 @@ const socialLinks = [
 ]
 
 const footerLinks = [
-  { href: "/", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#works", label: "Works" },
-  { href: "#insights", label: "Insights" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Inicio" },
+  { href: "#about", label: "Quiénes somos" },
+  { href: "#services", label: "Servicios" },
+  { href: "#works", label: "Proyectos" },
+  { href: "#contact", label: "Contacto" },
 ]
 
 export function Footer() {
@@ -26,10 +26,11 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link href="/" className="text-xl font-semibold tracking-tight">
-              portfolio
+              DYELUX
             </Link>
             <p className="mt-4 text-muted-foreground text-sm max-w-xs leading-relaxed">
-              Independent digital product designer crafting thoughtful, pixel-perfect experiences for the web.
+              Soluciones integrales en aluminio para desarrollos inmobiliarios y obras nuevas: colocación, suministro,
+              barandas y cerramientos.
             </p>
             <div className="flex items-center gap-4 mt-6">
               {socialLinks.map((social) => (
@@ -48,18 +49,18 @@ export function Footer() {
             </div>
             <div className="mt-4">
               <Link
-                href="mailto:hello@portfolio.com"
+                href="mailto:contacto@dyelux.com"
                 className="text-sm transition-colors hover:underline"
                 style={{ color: "#203eec" }}
               >
-                hello@portfolio.com
+                contacto@dyelux.com
               </Link>
             </div>
           </div>
 
           {/* Pages */}
           <div>
-            <h4 className="text-sm font-semibold mb-4">Pages</h4>
+            <h4 className="text-sm font-semibold mb-4">Navegación</h4>
             <ul className="space-y-3">
               {footerLinks.map((link) => (
                 <li key={link.label}>
@@ -74,46 +75,34 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter */}
+          {/* Contact */}
           <div>
-            <h4 className="text-sm font-semibold mb-4">Stay Updated</h4>
-            <p className="text-sm text-muted-foreground mb-4">Get insights and updates directly to your inbox.</p>
-            <form className="flex flex-col gap-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="px-4 py-2.5 text-sm bg-secondary rounded-lg border-0 focus:ring-2 outline-none"
-                style={{ ["--tw-ring-color" as any]: "#203eec" }}
-              />
-              <button
-                type="submit"
-                className="px-4 py-2.5 text-sm font-medium text-white rounded-lg transition-all relative overflow-hidden"
-                style={{
-                  background: "linear-gradient(135deg, #203eec 0%, #00d4ff 100%)",
-                  boxShadow: "0 4px 20px rgba(32, 62, 236, 0.3)",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = "0 8px 30px rgba(32, 62, 236, 0.5), 0 0 40px rgba(0, 212, 255, 0.3)"
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = "0 4px 20px rgba(32, 62, 236, 0.3)"
-                }}
-              >
-                Subscribe
-              </button>
-            </form>
+            <h4 className="text-sm font-semibold mb-4">Contacto</h4>
+            <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+              ¿Tenés un proyecto en marcha? Escribinos y nuestro equipo te asesora.
+            </p>
+            <Link
+              href="#contact"
+              className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white rounded-full transition-all relative overflow-hidden"
+              style={{
+                background: "linear-gradient(135deg, #203eec 0%, #00d4ff 100%)",
+                boxShadow: "0 4px 20px rgba(32, 62, 236, 0.3)",
+              }}
+            >
+              Contactanos
+            </Link>
           </div>
         </div>
 
         {/* Bottom */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 mt-16 pt-8 border-t border-border">
-          <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} portfolio. All rights reserved.</p>
+          <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} DYELUX. Todos los derechos reservados.</p>
           <div className="flex items-center gap-6">
             <Link href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-              Privacy Policy
+              Política de privacidad
             </Link>
             <Link href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-              Terms of Service
+              Términos del servicio
             </Link>
           </div>
         </div>
