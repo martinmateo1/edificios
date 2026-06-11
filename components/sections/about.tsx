@@ -7,22 +7,20 @@ const values = [
   { title: "Cumplimiento", description: "Planificación y responsabilidad en tiempos de obra." },
 ]
 
-import Image from "next/image"
 import { SectionTitle } from "@/components/ui/section-title"
 
 export function About() {
   return (
-    <section id="about" className="py-20 border-border border-t-0 md:py-10 md:pb-32 md:pt-32">
-      <div className="max-w-[1280px] mx-auto px-6 md:px-12">
-        <div className="relative aspect-[16/7] overflow-hidden rounded-3xl bg-secondary mb-12 md:mb-16">
-          <Image
-            src="/images/proyecto-forum.png"
-            alt="Proyecto Forum, obra de aluminio realizada por DYELUX"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
+    <section id="about" className="border-border border-t-0">
+      {/* Parallax image band */}
+      <div
+        aria-label="Proyecto Forum, obra de aluminio realizada por DYELUX"
+        role="img"
+        className="h-[50vh] md:h-[70vh] bg-cover bg-center bg-fixed bg-no-repeat"
+        style={{ backgroundImage: "url('/images/proyecto-forum.png')" }}
+      />
+
+      <div className="max-w-[1280px] mx-auto px-6 md:px-12 py-20 md:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Left Content */}
           <div>
