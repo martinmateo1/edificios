@@ -6,8 +6,6 @@ import { ArrowDown } from "lucide-react"
 import { useEffect, useState } from "react"
 
 export function Hero() {
-  const titleText = "Soluciones integrales en aluminio para desarrollos"
-  const words = titleText.split(" ")
   const [maskReveal, setMaskReveal] = useState(0)
   const [opacity, setOpacity] = useState(0)
   const [isDesktop, setIsDesktop] = useState(false)
@@ -47,29 +45,21 @@ export function Hero() {
         <div className="max-w-4xl">
           <p className="text-muted-foreground mb-6 text-lg font-normal">DYELUX — Aluminio para la construcción</p>
 
-          {/* Main Title with animated words */}
-          <h1 className="text-5xl sm:text-6xl lg:text-[96px] font-semibold tracking-tight leading-[1] text-balance md:text-9xl">
-            {words.map((word, index) => (
-              <span
-                key={index}
-                className={`hero-word my-0 py-2 font-mono font-normal text-5xl md:text-7xl ${word === "aluminio" ? "ai-gradient-word" : ""}`}
-                style={{
-                  animationDelay: `${index * 0.1}s`,
-                  marginRight: index < words.length - 1 ? "0.25em" : "0",
-                  ...(word === "aluminio"
-                    ? {
-                        background: "linear-gradient(135deg, #203eec 0%, #00d4ff 100%)",
-                        WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
-                        backgroundClip: "text",
-                        filter: "drop-shadow(0 0 20px rgba(32, 62, 236, 0.3)) drop-shadow(0 0 40px rgba(0, 212, 255, 0.2))",
-                      }
-                    : {}),
-                }}
-              >
-                {word}
-              </span>
-            ))}
+          {/* Main Title */}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05] text-balance">
+            Soluciones integrales en{" "}
+            <span
+              style={{
+                background: "linear-gradient(135deg, #203eec 0%, #00d4ff 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+                filter: "drop-shadow(0 0 20px rgba(32, 62, 236, 0.3)) drop-shadow(0 0 40px rgba(0, 212, 255, 0.2))",
+              }}
+            >
+              aluminio
+            </span>{" "}
+            para desarrollos
           </h1>
 
           <p className="mt-8 max-w-xl leading-relaxed text-left text-lg text-zinc-500 ml-0">
