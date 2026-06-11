@@ -139,7 +139,7 @@ export function SelectedWorks() {
                     </h3>
                     <ArrowUpRight
                       className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 mt-1"
-                      style={{ color: "#203eec" }}
+                      style={{ color: "#16307a" }}
                     />
                   </div>
 

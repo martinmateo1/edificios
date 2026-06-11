@@ -5,6 +5,8 @@ import Image from "next/image"
 import { ArrowDown } from "lucide-react"
 import { useEffect, useState } from "react"
 
+const DEEP_BLUE = "#16307a"
+
 export function Hero() {
   const [maskReveal, setMaskReveal] = useState(0)
   const [opacity, setOpacity] = useState(0)
@@ -37,10 +39,6 @@ export function Hero() {
 
   return (
     <section className="min-h-screen flex flex-col justify-center pt-20 relative overflow-hidden">
-      <div className="absolute -right-32 md:-right-48 top-32 md:top-40 w-[500px] h-[500px] md:w-[750px] md:h-[750px] pointer-events-none animate-orb-rotate -z-10 scale-125">
-        <Image src="/images/orb.png" alt="" width={750} height={750} className="w-full h-full" priority />
-      </div>
-
       <div className="max-w-[1280px] mx-auto px-6 md:px-12 py-20 md:py-32 md:pb-4 pb-4 pt-4 md:pt-32">
         <div className="max-w-4xl">
           <p className="text-muted-foreground mb-6 text-lg font-normal">DYELUX — Aluminio para la construcción</p>
@@ -48,18 +46,7 @@ export function Hero() {
           {/* Main Title */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05] text-balance">
             Soluciones integrales en{" "}
-            <span
-              style={{
-                background: "linear-gradient(135deg, #203eec 0%, #00d4ff 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-                filter: "drop-shadow(0 0 20px rgba(32, 62, 236, 0.3)) drop-shadow(0 0 40px rgba(0, 212, 255, 0.2))",
-              }}
-            >
-              aluminio
-            </span>{" "}
-            para desarrollos
+            <span style={{ color: DEEP_BLUE }}>aluminio</span> para desarrollos
           </h1>
 
           <p className="mt-8 max-w-xl leading-relaxed text-left text-lg text-zinc-500 ml-0">
@@ -71,16 +58,16 @@ export function Hero() {
           <div className="flex flex-row items-start gap-4 mt-10">
             <Link
               href="#works"
-              className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white rounded-full transition-all relative overflow-hidden group"
+              className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white rounded-full transition-all"
               style={{
-                background: "linear-gradient(135deg, #203eec 0%, #00d4ff 100%)",
-                boxShadow: "0 4px 20px rgba(32, 62, 236, 0.3)",
+                background: DEEP_BLUE,
+                boxShadow: "0 4px 20px rgba(22, 48, 122, 0.3)",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = "0 8px 30px rgba(32, 62, 236, 0.5), 0 0 40px rgba(0, 212, 255, 0.3)"
+                e.currentTarget.style.boxShadow = "0 8px 30px rgba(22, 48, 122, 0.45)"
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = "0 4px 20px rgba(32, 62, 236, 0.3)"
+                e.currentTarget.style.boxShadow = "0 4px 20px rgba(22, 48, 122, 0.3)"
               }}
             >
               Ver proyectos
@@ -88,7 +75,7 @@ export function Hero() {
             <Link
               href="#contact"
               className="inline-flex items-center gap-2 px-8 py-4 text-base font-medium transition-colors"
-              style={{ color: "#203eec" }}
+              style={{ color: DEEP_BLUE }}
             >
               Contacto
               <ArrowDown className="w-4 h-4" />

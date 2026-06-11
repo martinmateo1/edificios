@@ -38,12 +38,12 @@ export function Footer() {
                   key={social.label}
                   href={social.href}
                   className="p-2 rounded-full bg-secondary transition-colors hover:bg-opacity-10"
-                  style={{ ["--hover-bg" as any]: "#203eec20" }}
-                  onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#203eec20")}
+                  style={{ ["--hover-bg" as any]: "#16307a20" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#16307a20")}
                   onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "")}
                   aria-label={social.label}
                 >
-                  <social.icon className="w-4 h-4" style={{ color: "#203eec" }} />
+                  <social.icon className="w-4 h-4" style={{ color: "#16307a" }} />
                 </Link>
               ))}
             </div>
@@ -51,7 +51,7 @@ export function Footer() {
               <Link
                 href="mailto:contacto@dyelux.com"
                 className="text-sm transition-colors hover:underline"
-                style={{ color: "#203eec" }}
+                style={{ color: "#16307a" }}
               >
                 contacto@dyelux.com
               </Link>
@@ -83,10 +83,10 @@ export function Footer() {
             </p>
             <Link
               href="#contact"
-              className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white rounded-full transition-all relative overflow-hidden"
+              className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white rounded-full transition-all"
               style={{
-                background: "linear-gradient(135deg, #203eec 0%, #00d4ff 100%)",
-                boxShadow: "0 4px 20px rgba(32, 62, 236, 0.3)",
+                background: "#16307a",
+                boxShadow: "0 4px 20px rgba(22, 48, 122, 0.3)",
               }}
             >
               Contactanos

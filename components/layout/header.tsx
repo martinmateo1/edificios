@@ -83,15 +83,13 @@ export function Header() {
             <div className="hidden md:block">
               <Link
                 href="#contact"
-                className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-full text-white transition-all hover:shadow-xl relative overflow-hidden group"
+                className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-full text-white transition-all hover:shadow-xl"
                 style={{
-                  background: "linear-gradient(135deg, #203eec 0%, #00d4ff 100%)",
-                  boxShadow: "0 4px 20px rgba(32, 62, 236, 0.3)",
+                  background: "#16307a",
+                  boxShadow: "0 4px 20px rgba(22, 48, 122, 0.3)",
                 }}
               >
-                <span className="relative z-10">Contacto</span>
-                {/* Glow effect on hover */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl bg-gradient-to-r from-[#203eec] to-[#00d4ff]" />
+                Contacto
               </Link>
             </div>
 
@@ -131,15 +129,13 @@ export function Header() {
               <Link
                 href="#contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium rounded-full text-white transition-all hover:shadow-xl relative overflow-hidden group"
+                className="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium rounded-full text-white transition-all hover:shadow-xl"
                 style={{
-                  background: "linear-gradient(135deg, #203eec 0%, #00d4ff 100%)",
-                  boxShadow: "0 4px 20px rgba(32, 62, 236, 0.3)",
+                  background: "#16307a",
+                  boxShadow: "0 4px 20px rgba(22, 48, 122, 0.3)",
                 }}
               >
-                <span className="relative z-10">Contacto</span>
-                {/* Glow effect on hover */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl bg-gradient-to-r from-[#203eec] to-[#00d4ff]" />
+                Contacto
               </Link>
             </div>
           </div>

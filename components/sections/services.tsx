@@ -51,7 +51,7 @@ export function Services() {
               <div className="p-6 md:p-8 flex flex-col flex-1">
                 <span
                   className="inline-flex items-center justify-center w-9 h-9 rounded-full text-sm font-semibold text-white mb-5"
-                  style={{ background: "linear-gradient(135deg, #203eec 0%, #00d4ff 100%)" }}
+                  style={{ background: "#16307a" }}
                 >
                   {service.label}
                 </span>
@@ -62,7 +62,7 @@ export function Services() {
                 <ul className="grid grid-cols-2 gap-3 mt-6">
                   {service.items.map((item) => (
                     <li key={item} className="flex items-center gap-2 text-sm">
-                      <Check className="w-4 h-4 flex-shrink-0" style={{ color: "#203eec" }} />
+                      <Check className="w-4 h-4 flex-shrink-0" style={{ color: "#16307a" }} />
                       <span>{item}</span>
                     </li>
                   ))}
