@@ -1,8 +1,6 @@
 "use client"
 
 import Image from "next/image"
-import Link from "next/link"
-import { ArrowUpRight } from "lucide-react"
 import { SectionTitle } from "@/components/ui/section-title"
 
 const works = [
@@ -119,29 +117,21 @@ export function SelectedWorks() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {works.map((work) => (
-            <Link key={work.id} href="#" className="group block">
-              <article className="overflow-hidden rounded-3xl border border-border bg-card flex flex-col h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+            <div key={work.id} className="block">
+              <article className="overflow-hidden rounded-3xl border border-border bg-card flex flex-col h-full">
                 {/* Image */}
                 <div className="relative aspect-[16/9] overflow-hidden bg-secondary">
                   <Image
                     src={work.image || "/placeholder.svg"}
                     alt={work.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover"
                   />
                 </div>
 
                 {/* Content */}
                 <div className="p-6 md:p-8 flex flex-col flex-1">
-                  <div className="flex items-start justify-between gap-4">
-                    <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-balance">
-                      {work.title}
-                    </h3>
-                    <ArrowUpRight
-                      className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 mt-1"
-                      style={{ color: "#16307a" }}
-                    />
-                  </div>
+                  <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-balance">{work.title}</h3>
 
                   <p className="mt-4 text-muted-foreground leading-relaxed">{work.description}</p>
 
@@ -158,7 +148,7 @@ export function SelectedWorks() {
                   </div>
                 </div>
               </article>
-            </Link>
+            </div>
           ))}
         </div>
       </div>
