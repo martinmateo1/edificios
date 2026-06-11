@@ -8,35 +8,95 @@ import { SectionTitle } from "@/components/ui/section-title"
 const works = [
   {
     id: 1,
-    title: "Edificio residencial",
-    category: "Desarrollo inmobiliario",
-    description: "Colocación de aberturas de aluminio, barandas y cerramientos en obra nueva.",
-    image: "/images/work-onboarding.png",
-    tags: ["Aberturas", "Barandas", "Cerramientos"],
+    title: "Art-Tower",
+    description: "Suministro y colocación de rejillas para AA, louver en PB y P24, y revestimientos en Alucobond.",
+    image: "/placeholder.svg?height=450&width=800",
+    tags: ["Rejillas AA", "Louver", "Alucobond"],
   },
   {
     id: 2,
-    title: "Torre de departamentos",
-    category: "Obra nueva",
-    description: "Suministro y colocación de curtainwall y soluciones de aluminio a gran escala.",
-    image: "/images/work-fashion.png",
-    tags: ["Curtainwall", "Suministro", "Colocación"],
+    title: "Forum",
+    description: "Suministro y colocación de rejillas para AA, y colocación de aberturas y cristales.",
+    image: "/placeholder.svg?height=450&width=800",
+    tags: ["Rejillas AA", "Aberturas", "Cristales"],
   },
   {
     id: 3,
-    title: "Complejo comercial",
-    category: "Construcción",
-    description: "Provisión de materiales y ejecución de cerramientos de aluminio para locales y oficinas.",
-    image: "/images/work-tasks.png",
-    tags: ["Cerramientos", "Materiales", "Rejillas"],
+    title: "Manglar Brava",
+    description: "Colocación de barandas.",
+    image: "/placeholder.svg?height=450&width=800",
+    tags: ["Barandas"],
   },
   {
     id: 4,
-    title: "Desarrollo de viviendas",
-    category: "Desarrollo inmobiliario",
-    description: "Coordinación operativa e instalación de aberturas en múltiples unidades.",
-    image: "/images/work-crypto.png",
-    tags: ["Aberturas", "Instalación", "Obra nueva"],
+    title: "Manglar Albor",
+    description:
+      "Suministro y colocación de barandas, colocación de aberturas, rejillas para AA y curtainwall.",
+    image: "/placeholder.svg?height=450&width=800",
+    tags: ["Barandas", "Aberturas", "Rejillas AA", "Curtainwall"],
+  },
+  {
+    id: 5,
+    title: "Museo Atchugarry",
+    description: "Colocación de aberturas de aluminio, curtainwall y cristales.",
+    image: "/placeholder.svg?height=450&width=800",
+    tags: ["Aberturas", "Curtainwall", "Cristales"],
+  },
+  {
+    id: 6,
+    title: "Parque Mansa",
+    description: "Colocación de aberturas y barandas.",
+    image: "/placeholder.svg?height=450&width=800",
+    tags: ["Aberturas", "Barandas"],
+  },
+  {
+    id: 7,
+    title: "Torre Arenas",
+    description: "Colocación de aberturas y barandas en Torre 5.",
+    image: "/placeholder.svg?height=450&width=800",
+    tags: ["Aberturas", "Barandas"],
+  },
+  {
+    id: 8,
+    title: "Nouveau Soho",
+    description: "Suministro y colocación de aberturas de aluminio, barandas, rejillas y divisores de balcón.",
+    image: "/placeholder.svg?height=450&width=800",
+    tags: ["Aberturas", "Barandas", "Rejillas", "Divisores"],
+  },
+  {
+    id: 9,
+    title: "Cipriani",
+    description: "Colocación de aberturas de aluminio.",
+    image: "/placeholder.svg?height=450&width=800",
+    tags: ["Aberturas"],
+  },
+  {
+    id: 10,
+    title: "Brisas Guaná",
+    description: "Colocación de aberturas y barandas.",
+    image: "/placeholder.svg?height=450&width=800",
+    tags: ["Aberturas", "Barandas"],
+  },
+  {
+    id: 11,
+    title: "Cosmos",
+    description: "Colocación de aberturas de aluminio y cristales.",
+    image: "/placeholder.svg?height=450&width=800",
+    tags: ["Aberturas", "Cristales"],
+  },
+  {
+    id: 12,
+    title: "Acapulco Roosevelt",
+    description: "Producción y colocación de aberturas de aluminio, cristales y barandas.",
+    image: "/placeholder.svg?height=450&width=800",
+    tags: ["Aberturas", "Cristales", "Barandas"],
+  },
+  {
+    id: 13,
+    title: "INAVI",
+    description: "Colocación de fachada vidriada.",
+    image: "/placeholder.svg?height=450&width=800",
+    tags: ["Fachada vidriada"],
   },
 ]
 
@@ -74,14 +134,9 @@ export function SelectedWorks() {
                 {/* Content */}
                 <div className="p-6 md:p-8 flex flex-col flex-1">
                   <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-                        {work.category}
-                      </p>
-                      <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-balance mt-1">
-                        {work.title}
-                      </h3>
-                    </div>
+                    <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-balance">
+                      {work.title}
+                    </h3>
                     <ArrowUpRight
                       className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 mt-1"
                       style={{ color: "#203eec" }}
