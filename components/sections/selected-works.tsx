@@ -57,56 +57,53 @@ export function SelectedWorks() {
           </div>
         </div>
 
-        <div className="relative">
-          {works.map((work, index) => (
-            <div
-              key={work.id}
-              className="sticky"
-              style={{
-                top: `${70 + index * 0}px`,
-                zIndex: index + 1,
-              }}
-            >
-              <Link href="#" className="group block pt-10">
-                <article className="overflow-hidden rounded-2xl md:rounded-3xl border border-border bg-card transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                  {/* Image */}
-                  <div className="relative aspect-[2/1] overflow-hidden bg-secondary">
-                    <Image
-                      src={work.image || "/placeholder.svg"}
-                      alt={work.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {works.map((work) => (
+            <Link key={work.id} href="#" className="group block">
+              <article className="overflow-hidden rounded-3xl border border-border bg-card flex flex-col h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                {/* Image */}
+                <div className="relative aspect-[16/9] overflow-hidden bg-secondary">
+                  <Image
+                    src={work.image || "/placeholder.svg"}
+                    alt={work.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+
+                {/* Content */}
+                <div className="p-6 md:p-8 flex flex-col flex-1">
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
+                        {work.category}
+                      </p>
+                      <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-balance mt-1">
+                        {work.title}
+                      </h3>
+                    </div>
+                    <ArrowUpRight
+                      className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 mt-1"
+                      style={{ color: "#203eec" }}
                     />
                   </div>
 
-                  {/* Content */}
-                  <div className="p-3 md:p-3">
-                    <div className="flex items-start justify-between gap-4">
-                      <div>
-                        <h3 className="text-lg md:text-xl font-semibold">{work.title}</h3>
-                        <p className="text-sm text-muted-foreground mt-1">{work.description}</p>
-                      </div>
-                      <ArrowUpRight
-                        className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 mt-1"
-                        style={{ color: "#203eec" }}
-                      />
-                    </div>
+                  <p className="mt-4 text-muted-foreground leading-relaxed">{work.description}</p>
 
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      {work.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-3 py-1 text-xs font-medium bg-secondary text-secondary-foreground rounded-full"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mt-6">
+                    {work.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 text-xs font-medium bg-secondary text-secondary-foreground rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
                   </div>
-                </article>
-              </Link>
-            </div>
+                </div>
+              </article>
+            </Link>
           ))}
         </div>
       </div>
