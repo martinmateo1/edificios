@@ -1,42 +1,11 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import { ArrowDown } from "lucide-react"
-import { useEffect, useState } from "react"
 
 const DEEP_BLUE = "#16307a"
 
 export function Hero() {
-  const [maskReveal, setMaskReveal] = useState(0)
-  const [opacity, setOpacity] = useState(0)
-  const [isDesktop, setIsDesktop] = useState(false)
-
-  useEffect(() => {
-    const checkDesktop = () => {
-      setIsDesktop(window.innerWidth >= 768)
-    }
-
-    checkDesktop()
-    window.addEventListener("resize", checkDesktop)
-
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY
-      const maxScroll = 500
-      const revealPercentage = Math.min(100, (scrollPosition / maxScroll) * 100)
-      const calculatedOpacity = Math.min(1, scrollPosition / maxScroll)
-      setMaskReveal(revealPercentage)
-      setOpacity(calculatedOpacity)
-    }
-
-    handleScroll()
-    window.addEventListener("scroll", handleScroll)
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-      window.removeEventListener("resize", checkDesktop)
-    }
-  }, [])
-
   return (
     <section className="min-h-screen flex flex-col justify-center pt-20 relative overflow-hidden">
       <div className="max-w-[1280px] mx-auto px-6 md:px-12 py-20 md:py-32 md:pb-4 pb-4 pt-4 md:pt-32">
@@ -82,21 +51,6 @@ export function Hero() {
             </Link>
           </div>
         </div>
-      </div>
-
-      <div className="w-full mt-8">
-        <Image
-          src="/images/designer.png"
-          alt="Designer workspace"
-          width={1200}
-          height={800}
-          className="w-full h-auto transition-all duration-100 ease-out"
-          style={{
-            opacity: opacity,
-            clipPath: isDesktop ? `inset(${100 - maskReveal}% 0 0 0)` : "none",
-          }}
-          priority
-        />
       </div>
     </section>
   )
