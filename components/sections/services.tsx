@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { Check } from "lucide-react"
 import { SectionTitle } from "@/components/ui/section-title"
 
@@ -12,7 +11,6 @@ const services = [
     description:
       "Brindamos servicios especializados de colocación para proyectos residenciales y desarrollos inmobiliarios, con experiencia en coordinación operativa y ejecución en edificios de distintas características y escalas.",
     items: ["Aberturas de aluminio", "Barandas", "Rejillas", "Cerramientos", "Curtainwall", "Soluciones de obra nueva"],
-    image: "/images/work-onboarding.png",
   },
   {
     id: 2,
@@ -21,7 +19,6 @@ const services = [
     description:
       "Incorporamos soluciones de suministro de aberturas y materiales vinculados al desarrollo de obras nuevas, acompañando las necesidades de constructoras, desarrolladores e inversores.",
     items: ["Calidad", "Diseño", "Funcionalidad", "Eficiencia"],
-    image: "/images/work-fashion.png",
   },
 ]
 
@@ -39,15 +36,6 @@ export function Services() {
               key={service.id}
               className="overflow-hidden rounded-3xl border border-border bg-card flex flex-col"
             >
-              <div className="relative aspect-[16/9] overflow-hidden bg-secondary">
-                <Image
-                  src={service.image || "/placeholder.svg"}
-                  alt={service.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
               <div className="p-6 md:p-8 flex flex-col flex-1">
                 <span
                   className="inline-flex items-center justify-center w-9 h-9 rounded-full text-sm font-semibold text-white mb-5"
