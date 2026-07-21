@@ -32,13 +32,13 @@ export function About() {
           <div>
             <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">Quiénes somos</p>
             <div className="space-y-3">
-              <SectionTitle className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-balance">
+              <SectionTitle className="text-xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-balance">
                 +28 años de experiencia en el mercado
               </SectionTitle>
-              <SectionTitle className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-balance">
+              <SectionTitle className="text-xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-balance">
                 +50 proyectos ejecutados
               </SectionTitle>
-              <SectionTitle className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-balance">
+              <SectionTitle className="text-xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-balance">
                 +100.000 m² instalados
               </SectionTitle>
             </div>
