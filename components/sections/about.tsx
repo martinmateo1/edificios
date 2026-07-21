@@ -25,9 +25,17 @@ export function About() {
           {/* Left Content */}
           <div>
             <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">Quiénes somos</p>
-            <SectionTitle className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-balance">
-              Experiencia, trayectoria y compromiso en cada obra
-            </SectionTitle>
+            <div className="space-y-3">
+              <SectionTitle className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-balance">
+                +28 años de experiencia en el mercado
+              </SectionTitle>
+              <SectionTitle className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-balance">
+                +50 proyectos ejecutados
+              </SectionTitle>
+              <SectionTitle className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-balance">
+                +100.000 m² instalados
+              </SectionTitle>
+            </div>
             <p className="mt-6 text-muted-foreground leading-relaxed">
               DYELUX es una empresa especializada en soluciones de aluminio para desarrollos inmobiliarios y obras
               nuevas. A lo largo de los años hemos participado en múltiples proyectos junto a desarrolladores,
