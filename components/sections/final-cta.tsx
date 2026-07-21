@@ -54,6 +54,15 @@ export function FinalCTA() {
           </div>
         </div>
       </div>
+
+      {/* Closing statement */}
+      <div className="mt-20 md:mt-28 py-16 md:py-20 text-white" style={{ background: "#16307a" }}>
+        <div className="max-w-[1280px] mx-auto px-6 md:px-12">
+          <p className="text-3xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-balance text-center uppercase">
+            Soluciones integrales para tus proyectos
+          </p>
+        </div>
+      </div>
     </section>
   )
 }
