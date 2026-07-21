@@ -1,13 +1,12 @@
 "use client"
 
 import Link from "next/link"
-import { Github, Linkedin, Twitter, Dribbble } from "lucide-react"
+import { Linkedin, Instagram, Facebook } from "lucide-react"
 
 const socialLinks = [
-  { href: "#", icon: Twitter, label: "Twitter" },
   { href: "#", icon: Linkedin, label: "LinkedIn" },
-  { href: "#", icon: Github, label: "GitHub" },
-  { href: "#", icon: Dribbble, label: "Dribbble" },
+  { href: "#", icon: Instagram, label: "Instagram" },
+  { href: "#", icon: Facebook, label: "Facebook" },
 ]
 
 const footerLinks = [
@@ -32,7 +31,8 @@ export function Footer() {
               Soluciones integrales en aluminio para desarrollos inmobiliarios y obras nuevas: colocación, suministro,
               barandas y cerramientos.
             </p>
-            <div className="flex items-center gap-4 mt-6">
+            <h4 className="text-sm font-semibold mt-8 mb-3">Redes sociales</h4>
+            <div className="flex items-center gap-4">
               {socialLinks.map((social) => (
                 <Link
                   key={social.label}
