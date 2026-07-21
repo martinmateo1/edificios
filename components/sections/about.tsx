@@ -14,7 +14,7 @@ import { SectionTitle } from "@/components/ui/section-title"
 
 export function About() {
   return (
-    <section id="about" className="border-border border-t-0">
+    <section className="border-border border-t-0">
       {/* Parallax image band */}
       <div
         aria-label="Proyecto Forum, obra de aluminio realizada por DYELUX"
@@ -22,6 +22,9 @@ export function About() {
         className="h-[50vh] md:h-[70vh] bg-cover bg-center bg-fixed bg-no-repeat"
         style={{ backgroundImage: "url('/images/proyecto-forum.png')" }}
       />
+
+      {/* Scroll anchor — offset by header height */}
+      <div id="about" style={{ marginTop: "-80px", paddingTop: "80px", pointerEvents: "none" }} aria-hidden="true" />
 
       <div className="max-w-[1280px] mx-auto px-6 md:px-12 py-20 md:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
