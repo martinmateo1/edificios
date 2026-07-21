@@ -4,6 +4,7 @@ import type React from "react"
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 
@@ -59,9 +60,16 @@ export function Header() {
                 e.preventDefault()
                 window.scrollTo({ top: 0, behavior: "smooth" })
               }}
-              className="text-lg font-semibold tracking-tight"
+              className="flex items-center"
             >
-              DYELUX
+              <Image
+                src="/images/logo.png"
+                alt="DYELUX - Aberturas de Aluminio"
+                width={160}
+                height={52}
+                className="h-10 md:h-12 w-auto object-contain"
+                priority
+              />
             </Link>
 
             {/* Desktop Navigation */}
@@ -115,8 +123,14 @@ export function Header() {
         <div className="fixed inset-0 z-50 bg-background md:hidden">
           <div className="flex flex-col h-full p-6">
             <div className="flex items-center justify-between">
-              <Link href="/" className="text-lg font-semibold tracking-tight">
-                DYELUX
+              <Link href="/" className="flex items-center">
+                <Image
+                  src="/images/logo.png"
+                  alt="DYELUX - Aberturas de Aluminio"
+                  width={140}
+                  height={46}
+                  className="h-10 w-auto object-contain"
+                />
               </Link>
               <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 -mr-2" aria-label="Close menu">
                 <X className="w-5 h-5" />
