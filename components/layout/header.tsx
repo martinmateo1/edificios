@@ -79,17 +79,26 @@ export function Header() {
               ))}
             </div>
 
-            {/* CTA Button */}
-            <div className="hidden md:block">
+            {/* CTA Buttons */}
+            <div className="hidden md:flex items-center gap-3">
               <Link
                 href="#contact"
+                onClick={(e) => handleNavClick(e, "#contact")}
+                className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-full border transition-all hover:bg-secondary"
+                style={{ borderColor: "#16307a", color: "#16307a" }}
+              >
+                Asesoramiento técnico
+              </Link>
+              <Link
+                href="#contact"
+                onClick={(e) => handleNavClick(e, "#contact")}
                 className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-full text-white transition-all hover:shadow-xl"
                 style={{
                   background: "#16307a",
                   boxShadow: "0 4px 20px rgba(22, 48, 122, 0.3)",
                 }}
               >
-                Contacto
+                Solicitar cotización
               </Link>
             </div>
 
@@ -125,17 +134,25 @@ export function Header() {
                 </Link>
               ))}
             </nav>
-            <div className="mt-auto">
+            <div className="mt-auto flex flex-col gap-3">
               <Link
                 href="#contact"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => handleNavClick(e, "#contact")}
+                className="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium rounded-full border transition-all hover:bg-secondary"
+                style={{ borderColor: "#16307a", color: "#16307a" }}
+              >
+                Asesoramiento técnico
+              </Link>
+              <Link
+                href="#contact"
+                onClick={(e) => handleNavClick(e, "#contact")}
                 className="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium rounded-full text-white transition-all hover:shadow-xl"
                 style={{
                   background: "#16307a",
                   boxShadow: "0 4px 20px rgba(22, 48, 122, 0.3)",
                 }}
               >
-                Contacto
+                Solicitar cotización
               </Link>
             </div>
           </div>
