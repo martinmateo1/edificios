@@ -51,7 +51,7 @@ const works = [
     id: 7,
     title: "Torre Arenas",
     description: "Colocación de aberturas y barandas en Torre 5.",
-    image: "/placeholder.svg?height=450&width=800",
+    image: "/images/torre-arenas.png",
     tags: ["Aberturas", "Barandas"],
   },
   {
