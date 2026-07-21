@@ -3,7 +3,10 @@
 const values = [
   { title: "Calidad", description: "Compromiso con altos estándares de ejecución y terminación." },
   { title: "Experiencia", description: "Trayectoria en proyectos de distinta escala y complejidad." },
-  { title: "Confianza", description: "Relaciones construidas a largo plazo con clientes y desarrolladores." },
+  {
+    title: "Capacidad operativa",
+    description: "Ejecución en obras de distintas escalas y soluciones técnicas adaptadas a cada proyecto.",
+  },
   { title: "Cumplimiento", description: "Planificación y responsabilidad en tiempos de obra." },
 ]
 
